@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 import os
 from nltk.corpus import stopwords
-from keras._tf_keras.keras.models import load_model
+from keras.models import load_model
 from flask import Flask, jsonify
 import firebase_admin
 from firebase_admin import credentials, firestore
