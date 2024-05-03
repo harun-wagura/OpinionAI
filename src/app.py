@@ -158,9 +158,9 @@ def predict():
 # Example usage:
 if __name__ == "__main__":
     # Initialize TextClassifier with paths to model and vectorizer
-    model_path = "/model/text_classifier.keras"
-    vectorizer_path = '/model/tfidf_vectorizer.pkl'
-    label_encoder_path = '/model/label_encoder.pkl'
-    category_names_path = '/model/category_names.pkl'
+    model_path = "./model/text_classifier.keras"
+    vectorizer_path = './model/tfidf_vectorizer.pkl'
+    label_encoder_path = './model/label_encoder.pkl'
+    category_names_path = './model/category_names.pkl'
     classifier = TextClassifier(model_path, vectorizer_path, label_encoder_path, category_names_path)
     app.run(host='0.0.0.0', port=5001)
