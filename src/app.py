@@ -11,7 +11,7 @@ from firebase_admin import credentials, firestore
 
 # Initialize Firestore app
 # service_account_key =  os.environ.get('FIREBASE_CREDENTIALS_CERTIFICATE')
-cred = credentials.Certificate("/etc/secrets/firebase.env")
+cred = credentials.Certificate("/etc/secrets/firebase.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
