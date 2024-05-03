@@ -108,7 +108,7 @@ def parse_data(document: list):
 
     return data
 
-@app.route("/", methods=["GET"])
+@app.route('/', methods=["GET"])
 def index():
     try:
         return jsonify("OpinionAI book"), 200
