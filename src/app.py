@@ -108,6 +108,13 @@ def parse_data(document: list):
 
     return data
 
+@app.route("/", methods=["GET"])
+def index():
+    try:
+        return jsonify("OpinionAI book"), 200
+    except Exception as e:
+          return jsonify({"error": str(e)}), 500
+        
 
 @app.route('/predict', methods=['GET'])
 def predict():
