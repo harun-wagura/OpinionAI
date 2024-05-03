@@ -164,4 +164,4 @@ if __name__ == "__main__":
     label_encoder_path = cwd + '/model/label_encoder.pkl'
     category_names_path = cwd+ '/model/category_names.pkl'
     classifier = TextClassifier(model_path, vectorizer_path, label_encoder_path, category_names_path)
-    app.run(host='0.0.0.0', port=5001)
+    app.run(host='0.0.0.0', port=5000)
