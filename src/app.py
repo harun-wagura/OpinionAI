@@ -23,6 +23,7 @@ class TextClassifier:
         # Load the trained Keras model
         self.category_names = None
         self.model = load_model(model_path)
+        print("Model loaded: ", model)
 
         # Load the TF-IDF vectorizer
         with open(vectorizer_path, 'rb') as file:
