@@ -1,6 +1,6 @@
 import re
 import pickle
-import logging 
+
 
 import numpy as np
 import os
@@ -9,8 +9,8 @@ from keras.models import load_model
 from flask import Flask, jsonify
 import firebase_admin
 from firebase_admin import credentials, firestore
-# Configure logger
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
 
 # Initialize Firestore app
 # service_account_key =  os.environ.get('FIREBASE_CREDENTIALS_CERTIFICATE')
@@ -25,9 +25,8 @@ class TextClassifier:
     def __init__(self, model_path, vectorizer_path, label_encoder_path, category_names_path):
         # Load the trained Keras model
         self.category_names = None
-        logging.debug("Constructor loaded...")
         self.model = load_model(model_path)
-        logging.debug("Model loaded")
+    
 
         # Load the TF-IDF vectorizer
         with open(vectorizer_path, 'rb') as file:
@@ -172,7 +171,7 @@ if __name__ == "__main__":
     # Initialize TextClassifier with paths to model and vectorizer
     cwd = os.getcwd();
     model_path = cwd + "/model/text_classifier.keras"
-    logging.info("Model path: ", model_path)
+    
     vectorizer_path = cwd + '/model/tfidf_vectorizer.pkl'
     label_encoder_path = cwd + '/model/label_encoder.pkl'
     category_names_path = cwd+ '/model/category_names.pkl'
