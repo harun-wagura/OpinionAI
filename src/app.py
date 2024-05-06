@@ -25,8 +25,9 @@ class TextClassifier:
     def __init__(self, model_path, vectorizer_path, label_encoder_path, category_names_path):
         # Load the trained Keras model
         self.category_names = None
+        logging.debug("Constructor loaded...")
         self.model = load_model(model_path)
-        logging.debug("Model loaded)
+        logging.debug("Model loaded")
 
         # Load the TF-IDF vectorizer
         with open(vectorizer_path, 'rb') as file:
